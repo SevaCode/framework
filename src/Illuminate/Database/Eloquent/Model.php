@@ -1593,7 +1593,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      */
     public function __isset($key)
     {
-        return $this->offsetExists($key);
+        return ! is_null($this->getAttribute($key));
     }
 
     /**
